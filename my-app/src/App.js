@@ -4,22 +4,21 @@ import Hello from './Components/Hello';
 import Bye from './Components/Bye';
 import Star from './Components/Star';
 import Counter from './Components/Counter';
-// import Counter from './Components/Counter';
-// import Counter from './Components/Counter';
+import Blinkit from './Components/Blinkit';
 
 function App() {
   return (
     <div>
       
-        <Bye a={"Bye"} b={10}/>
+      {/* <Bye a={"Bye"} b={10}/> */}
         
-      
-        <Hello/>
+      {/* <Hello/> */}
 
+      {/* <Star name="shyamal" age={22} location="rajkot,guj"/> */}
 
-       <Star name="shyamal" age={22} location="rajkot,guj"/>
+      {/* <Counter a='hello' /> */}
 
-       <Counter a='hello' />
+      <Blinkit />
 
     </div>
   );
