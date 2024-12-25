@@ -18,7 +18,7 @@ function App() {
 
       <Counter a='hello' />
 
-      // <Blinkit />
+      <Blinkit />
 
     </div>
   );
