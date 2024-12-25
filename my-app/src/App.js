@@ -16,9 +16,9 @@ function App() {
 
       {/* <Star name="shyamal" age={22} location="rajkot,guj"/> */}
 
-      {/* <Counter a='hello' /> */}
+      <Counter a='hello' />
 
-      <Blinkit />
+      // <Blinkit />
 
     </div>
   );
