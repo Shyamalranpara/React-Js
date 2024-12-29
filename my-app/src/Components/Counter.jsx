@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Counter({a}) {
 
@@ -16,6 +17,8 @@ function Counter({a}) {
     
   return (
     <div>
+
+      {/* <Link to='/Blinkit'>Blinkit</Link> */}
 
     <div> {a} </div>
     <div>counter :- {count}</div>

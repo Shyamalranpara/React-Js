@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Blinkit() {
     
   return (
     <div>
+
+{/* <Link to='/Counter'>Counter</Link> */}
 
         <img  style={{width: "100%",height: "38vh" }} src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg" alt="" />
 
