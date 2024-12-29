@@ -61,7 +61,13 @@ function App() {
         
       {/* <Hello/> */}
 
+<<<<<<< HEAD
       {/* <Counter a='hello' /> */}
+=======
+      {/* <Star name="shyamal" age={22} location="rajkot,guj"/> */}
+
+      <Counter a='hello' />
+>>>>>>> 7d6ad909be240950d33ec63d729ab3c1443f0d02
 
       {/* <Blinkit /> */}
 
