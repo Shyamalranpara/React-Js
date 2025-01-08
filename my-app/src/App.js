@@ -17,12 +17,29 @@ import Userinput from './Components/Userinput';
 // import { BrowserRouter as Router, Routes, Route, Form } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
-import Loggin from './Components/Loggin';
 import Form from './Components/Form';
+import Log from './Components/Log';
+// import Singup from './Components2/Singup';
+// import Login from './Components2/Login';
+// import { Route, Routes } from 'react-router-dom';
+// import Products from './Components2/Products';
 
 
+
+import { useEffect, useState } from 'react';
+import { Link,Navigate, Route, Routes} from 'react-router-dom';
+
+import Signup from './Components2/Signup';
+import Login from './Components2/Login';
+import Products from './Components2/Products';
+import Cart from './Components2/Cart';
 function App() {
 
+  const[isLoggedin,setIsLoggedin]=useState(JSON.parse(localStorage.getItem("currentUser")) || null);
+  console.log(isLoggedin);
+  useEffect(()=>{
+
+  },[isLoggedin]);
   return (
     <div className='App'>
 
@@ -38,10 +55,21 @@ function App() {
       <Route path="/About" element={<About/>}/>
       </Routes> */}
 
-      <Form/>
-       
-    {/* <Loggin/> */}
+    <Routes>
+    <Route path="/" element={<Signup/>}/>
 
+      <Route path="/Login" element={<Login/>}/>
+
+      <Route path="/Products" element={isLoggedin ? <Products/>:<Navigate to="/login"/>}/>
+      <Route path="/cart" element={isLoggedin ? <Cart/>:<Navigate to="/login"/>}/>
+
+      </Routes>
+
+      
+      {/* <Form/> */}
+
+      {/* <Log/> */}
+       
     {/* <Home/> */}
 
       {/* <Count/> */}

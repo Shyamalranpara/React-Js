@@ -69,13 +69,24 @@ const Form = () => {
         <div>
       <h1 style={{color:"#240747"}}>Singup Form</h1>
 
+      <div style={{textAlign:"start"}}>
+      <label htmlFor="name">Username</label>
       <input style={{width:"150%",height:"30px",border:"none",borderRadius:"5px"}} type="text" placeholder='Enter Username' value={username} onChange={(e) => setUsername(e.target.value)} />
+     
       <br /> <br />
+
+      <label htmlFor="name">Email</label>
       <input style={{width:"150%",height:"30px",border:"none",borderRadius:"5px"}} type='text' placeholder='Enter the Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+     
       <br /> <br />
+
+      <label htmlFor="name">Password</label>
       <input style={{width:"150%",height:"30px",border:"none",borderRadius:"5px"}} type="password" placeholder='Enter password' value={password} onChange={(e) => setPassword(e.target.value)} />
+     
       <br /> <br />
+
       <button style={{width:"80px",height:"40px",color:"white",backgroundColor:"#005792",border:"none",borderRadius:"8px"}} onClick={user}>Login</button>
+      </div>
 
       <h2 style={{color:"#240747"}}>Registered Users:</h2>
 
