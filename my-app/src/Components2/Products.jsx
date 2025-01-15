@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Product = () => {
+const Products = () => {
   const navigate = useNavigate();
 
   const[currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("currentUser")) || {});
@@ -22,4 +22,4 @@ const Product = () => {
   )
 }
 
-export default Product
+export default Products

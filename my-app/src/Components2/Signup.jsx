@@ -13,15 +13,27 @@ const Signup = () => {
     e.preventDefault();
 
     const obj = { name, password };
-    const updatedUsers = [...users, obj];
-    setUsers(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+    if(users.find((el)=>{
+     return name === el.name && password === el.password
+    })){
+      alert("User already exists please login to continue");
+      navigate("/login");
+
+    }
+    else{
+
+      
+      const updatedUsers = [...users, obj];
+      setUsers(updatedUsers);
+      localStorage.setItem("users", JSON.stringify(updatedUsers));
+      alert("Signup successful");
+      navigate("/login");
+    }
 
     setName("");
     setPassword("");
 
-    alert("Signup successful");
-    navigate("/login");
   };
 
   return (
