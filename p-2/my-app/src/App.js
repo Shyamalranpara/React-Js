@@ -1,6 +1,6 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-import { Link,Navigate, Route, Routes} from 'react-router-dom';
+import { createContext, useEffect, useState } from 'react';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -11,31 +11,37 @@ import Cart from './components/Cart';
 import Button from 'react-bootstrap/Button';
 import { ThemeProvider } from 'react-bootstrap';
 import Cards from './components/Card';
+import Loginn from './components 2/Loginn';
 
-
+export const Context = createContext();
 
 function App() {
-  
-  const[isLoggedin,setIsLoggedin]=useState(JSON.parse(localStorage.getItem("currentUser")) || null);
-  console.log(isLoggedin);
-  
-  useEffect(()=>{
+  const [user, setUser] = useState("");
 
-  },[isLoggedin]);
+  // const[isLoggedin,setIsLoggedin]=useState(JSON.parse(localStorage.getItem("currentUser")) || null);
+  // console.log(isLoggedin);
+
+  // useEffect(()=>{
+
+  // },[isLoggedin]);
 
   return (
-    <div className="App">
+    <Context.Provider value={{ user, setUser }}>
 
-{/* <Cards/> */}
+      <div className="App">
+        
+        <Loginn />
+
+        {/* <Cards/> */}
 
 
-      {/* <Mems/> */}
-      {/* <ThemeProvider>
+        {/* <Mems/> */}
+        {/* <ThemeProvider>
 
 
   </ThemeProvider> */}
-  
-      <Routes>
+
+        {/* <Routes>
     <Route path="/" element={<Signup/>}/>
 
       <Route path="/Login" element={<Login/>}/>
@@ -43,8 +49,9 @@ function App() {
       <Route path="/Products" element={isLoggedin ? <Products/>:<Navigate to="/login"/>}/>
       <Route path="/cart" element={isLoggedin ? <Cart/>:<Navigate to="/login"/>}/>
 
-      </Routes>
-    </div>
+      </Routes> */}
+      </div>
+    </Context.Provider>
   );
 }
 
