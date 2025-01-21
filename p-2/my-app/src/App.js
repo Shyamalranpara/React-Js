@@ -11,7 +11,7 @@ import Cart from './components/Cart';
 import Button from 'react-bootstrap/Button';
 import { ThemeProvider } from 'react-bootstrap';
 import Cards from './components/Card';
-import Loginn from './components 2/Loginn';
+import Loginn from './Context/Loginn';
 
 export const Context = createContext();
 
