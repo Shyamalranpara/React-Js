@@ -12,11 +12,13 @@ import Button from 'react-bootstrap/Button';
 import { ThemeProvider } from 'react-bootstrap';
 import Cards from './components/Card';
 import Loginn from './Context/Loginn';
+import { Counter } from './Redux/Counter';
+import { ParentComponent } from './components 2/Nchild';
 
 export const Context = createContext();
 
 function App() {
-  const [user, setUser] = useState("");
+  // const [user, setUser] = useState("");
 
   // const[isLoggedin,setIsLoggedin]=useState(JSON.parse(localStorage.getItem("currentUser")) || null);
   // console.log(isLoggedin);
@@ -26,22 +28,28 @@ function App() {
   // },[isLoggedin]);
 
   return (
-    <Context.Provider value={{ user, setUser }}>
+    // <Context.Provider value={{ user, setUser }}>
 
       <div className="App">
+
+        <Counter/>
         
-        <Loginn />
+
+        {/* <ParentComponent/> */}
+
+        {/* <Loginn /> */}
 
         {/* <Cards/> */}
 
 
         {/* <Mems/> */}
+
         {/* <ThemeProvider>
 
 
   </ThemeProvider> */}
 
-        {/* <Routes>
+        {/* { <Routes>
     <Route path="/" element={<Signup/>}/>
 
       <Route path="/Login" element={<Login/>}/>
@@ -49,9 +57,12 @@ function App() {
       <Route path="/Products" element={isLoggedin ? <Products/>:<Navigate to="/login"/>}/>
       <Route path="/cart" element={isLoggedin ? <Cart/>:<Navigate to="/login"/>}/>
 
-      </Routes> */}
+      </Routes>} */}
+
+
+      
       </div>
-    </Context.Provider>
+    //  </Context.Provider>
   );
 }
 
