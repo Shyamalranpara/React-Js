@@ -1,0 +1,32 @@
+{
+  "get": [
+    {
+      "id": "1",
+      "body": "name",
+      "postId": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": "2",
+      "title": "name2",
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": "7fae",
+      "title": "cd",
+      "author": "my app"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
