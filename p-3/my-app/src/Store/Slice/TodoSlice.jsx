@@ -4,6 +4,7 @@ const initialState = {
     todos: [{ id: 1, text: "hello react" },
 
         {id: 2, text:"ReduxJs/toolkit"},
+
     ]
 };
 export const TodoSlice = createSlice({

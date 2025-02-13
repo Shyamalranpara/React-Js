@@ -7,6 +7,8 @@ import Addtodo from './Components/Addtodo';
 import { Provider } from 'react-redux';
 import { Store } from './Store/Store';
 import Todos from './Components/Todos';
+import Add from './Components/Add';
+import Form from './Components/Form';
 
 function App() {
   return (
@@ -32,6 +34,15 @@ function App() {
 <Todos/>
 
 </Provider>
+
+
+
+<Provider store={Store}>
+  <Add/>
+  <Form/>
+  </Provider>
+
+
 
     </div>
   );
