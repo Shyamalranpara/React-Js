@@ -1,45 +1,19 @@
-import React, { useEffect } from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import {BrowserRouter as Router, Routes, Route, Navigate,} from "react-router-dom";
+import React from 'react'
+import Loop from './Components3/Loop'
+import Profile from './Components3/Profile'
+import "/src/Components3/Netflix.css";
+// import "./Components3/Netfix.css";
 
-import Login from "./Components1/Login";
-import SignUp from "./Components1/Register";
-
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Profile from "./components/profile";
-import { useState } from "react";
-import { auth } from "../Firebaseconfig";
-
-function App() {
-  const [user, setUser] = useState();
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      setUser(user);
-    });
-  });
+const App = () => {
   return (
-    
-    <Router>
-      <div className="App">
-        <div className="auth-wrapper">
-          <div className="auth-inner">
-            <Routes>
-              <Route
-                path="/"
-                element={user ? <Navigate to="/profile" /> : <Login />}
-              />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<SignUp />} />
-              <Route path="/profile" element={<Profile />} />
-            </Routes>
-            <ToastContainer />
-          </div>
-        </div>
-      </div>
-    </Router>
-  );
+ <section className='container'>
+
+  <h1 className='card-heading'>List Of The Best Netflix Series</h1>
+
+<Loop/>
+
+ </section>
+  )
 }
 
-export default App;
+export default App
